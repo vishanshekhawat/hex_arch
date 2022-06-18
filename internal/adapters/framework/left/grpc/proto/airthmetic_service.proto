@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package pb;
+
+import "number_msg.proto";
+
+option go_package = "./pb";
+
+service AirthmaticService{
+    rpc GetAddition(OperationParameter) returns(Answer) {}
+    rpc GetSubstraction(OperationParameter) returns(Answer) {}
+    rpc GetMultiplication(OperationParameter) returns(Answer) {}
+    rpc GetDivison(OperationParameter) returns(Answer) {}
+}
